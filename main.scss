@@ -1,0 +1,65 @@
+body {
+  inline-size: 100vw;
+  block-size: 100vh;
+}
+
+.appear-section {
+  block-size: 2000px;
+  background-color: #FFDE15;
+
+  .scroll-spy {
+    transition: .7s;
+
+    img {
+      inline-size: 120px;
+      block-size: 120px;
+      border-radius: 50%;
+
+      &.reverse {
+        transform: scaleX(-1);
+      }
+    }
+
+    &.back-to-left {
+      transform: translateX(-1000px);
+    }
+
+    &.back-to-right {
+      transform: translateX(1000px);
+    }
+
+    &.show {
+      transform: translateX(0);
+    }
+
+    &:nth-child(1) {
+      position: absolute;
+      inset-block-start: 600px;
+      inset-inline-start: 100px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      inset-block-start: 800px;
+      inset-inline-start: 100px;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      inset-block-start: 1000px;
+      inset-inline-start: 100px;
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      inset-block-start: 600px;
+      inset-inline-end: 100px;
+    }
+
+    &:nth-child(5) {
+      position: absolute;
+      inset-block-start: 800px;
+      inset-inline-end: 100px;
+    }
+  }
+}
